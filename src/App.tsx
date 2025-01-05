@@ -1,12 +1,12 @@
 import { useState, createContext } from 'react';
 import './App.css';
 import HomeComponent from './components/HomeComponent';
-import TodoComponent from './components/TodoComponent';
-import ArticleForm from './components/ArticleForm';
+import TodoComponent from './components/Todo/TodoComponent';
+import ArticleForm from './components/Arcticles/ArticleForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Articles from './components/Articles';
+import Articles from './components/Arcticles/Articles';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 

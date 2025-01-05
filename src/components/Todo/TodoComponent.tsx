@@ -1,7 +1,6 @@
 import { useReducer, useState, FormEvent } from 'react';
 import TodoListComponent from './TodoListComponent';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Button, Form, Row, Col } from 'react-bootstrap';
 
 export interface Todo {
   id: string;
@@ -91,15 +90,23 @@ function TodoComponent() {
 
   return (
     <div className="todocontainer">
-      <form onSubmit={handleSubmit} className="d-flex justify-content-between">
-        <input
-          type="text"
-          placeholder="Enter the task"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
-        />
-        <Button variant="success" type="submit" size="sm">Submit</Button>
-      </form>
+      <Form onSubmit={handleSubmit} className="mb-3">
+        <Row className="align-items-center">
+          <Col xs={10}> {/* Increased width */}
+            <Form.Control
+              type="text"
+              placeholder="Enter the task"
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+            />
+          </Col>
+          <Col xs={2}>
+            <Button variant="success" type="submit" size="sm" className="w-100">
+              Submit
+            </Button>
+          </Col>
+        </Row>
+      </Form>
       {todos.length > 0 && (
         <TodoListComponent
           todos={todos}

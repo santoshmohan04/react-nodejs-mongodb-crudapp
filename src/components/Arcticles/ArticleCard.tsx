@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Card, Button, Col, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Article } from '../types/article';
-import { deleteArticle } from '../services/articleService';
+import { Article } from '../../types/article';
+import { deleteArticle } from '../../services/articleService';
 
 interface ArticleCardProps {
   article: Article;

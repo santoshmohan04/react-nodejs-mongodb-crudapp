@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Container, Spinner } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import { createArticle, updateArticle, fetchArticleById } from '../services/articleService';
+import { createArticle, updateArticle, fetchArticleById } from '../../services/articleService';
 
 const ArticleForm = () => {
   const navigate = useNavigate();
